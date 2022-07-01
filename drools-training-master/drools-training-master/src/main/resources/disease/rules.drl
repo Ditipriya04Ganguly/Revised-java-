@@ -1,0 +1,10 @@
+package disease;
+import model.Patient;
+
+rule "disease1"
+
+  when
+    $patient : Patient(status=="Active")
+  then
+    $patient.setPreFill("Y");
+end
